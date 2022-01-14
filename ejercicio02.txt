@@ -6,50 +6,53 @@ La función uno debe retornar una cadena; como ejemplo:*/
 
 1. Inicio
 2. funcion principal ()()
-3.   opcion, i [0-n]
-4. condicion.b <-- true
-5. Mientra(condicion) haga
-6.  Escribir "Ingrese 1 para ingresar un auto o 7. para ingresar una moto" //1 // 2
+3. opcion, i [0-n]
+4. condicion,b[true,false] <-- true // true
+5. cadenaFinal, x(100)[{A-Z}, {a-z},{BS}, {0-n}]<-- " "
+6. Mientras(condicion) haga // true
+7.  Escribir "Ingrese 1 para ingresar un auto o 2 para ingresar una moto" //1 
 8.  lea opcion //1
 9.  Si (opcion == 1) entonces 
-10.   presentar <-- calcularAuto()// Auto marca Onda con año de fabricacion 1990.
+10.   presentar <-- calcularAuto("Auto")// Auto marca Onda con año de fabricacion 1990.
 11.     Caso Contrario 
 12.       Si (opcion == 2) entonces // Moto con motor a gasolina y 3 asientos.
-13.         presentar <-- calcularMoto()
+13.         presentar <-- calcularMoto("Moto")
 14.           Caso Contrario 
-15.             presentar <--  "error"
-16.  Fin_Si
-17.  Escribir (presentar) // Auto marca Onda con año de fabricacion 1990. // Moto con motor a gasolina y 3 asientos.
-18.  Escribir "Ingrese 0 para finalizar" // 1 // 0
-19.  lea opcion 
-20.  Si opcion == 0 entonces
-21.     condicion <-- false
-22.  Fin_Si
-23.  Fin_Mientras
-24. fin funcion principal
+15.             Escribir "Error, valor fuera de rango admitido"
+16.       Fin_Si
+17.  Fin_Si
+18.  cadena <-- cadena + presentar 
+19.  Escribir "Ingrese 0 para dejar de ingresar datos" // 1 // 0
+20.  lea opcion 
+21.  Si opcion == 0 entonces
+22.     condicion <-- false
+23.  Fin_Si
+24. Fin_Mientras
+25. Escribir (cadena)
+26. fin funcion principal
 
-25. funcion calcularAuto()  x
-26.   marca, x(30)[(A-Z), (a-z},(BS}]
-27.   año, d[0,n]
-28.   cadena, x(100)[{A-Z}, {a-z},{BS}, (0-n}<-- " "
-29.   Escribir "Ingrese la marca del auto"
-30.   Leer marca // Onda
-31.   Escribir "Ingrese el año del auto"
-32.   Leer año // 1990
-33.   cadena <-- "Auto marca " + marca + " con año de fabricación " + año + "." // Auto marca Onda con año de fabricacion 1990.
-34.   return cadena
-35. fin funcion calcularAuto
+27. funcion calcularAuto(a,x): x
+28.   marca, x(30)[(A-Z), (a-z},(BS}]
+29.   año, d[0,n]
+30.   cadena, x(100)[{A-Z}, {a-z},{BS}]<-- " "
+31.   Escribir "Ingrese la marca del auto"
+32.   Leer marca // Onda
+33.   Escribir "Ingrese el año del auto"
+34.   Leer año // 1990
+35.   cadena <-- a + " marca " + marca + " con año de fabricación " + año + ".\n" // Auto marca Onda con año de fabricacion 1990.
+36.   return cadena
+37. fin funcion calcularAuto
 
-36. funcion calcularMoto(nombre, x; cedula, x)  x
-37.   motor, x(30)[(A-Z), (a-z},(BS}]
-38.   asientos, d[0,n]
-39.   cadena, x(100)[{A-Z}, {a-z},{BS}, (0-n}<-- " "
-40.   Escribir "Ingrese el tipo de motor" 
-41.   Leer motor  // gasolina
-42.   Escribir "Ingrese el numero de asientos"
-43.   Leer asientos // 3
-44.   cadena <-- "Moto con motor a " + motor + " y " + asientos + " asientos." // Moto con motor a gasolina y 3 asientos.
-45.   return cadena
-46. fin funcion calcularMoto
+38. funcion calcularMoto(b,x):  x
+39.   motor, x(30)[(A-Z), (a-z},(BS}]
+40.   asientos, d[0,n]
+41.   cadena, x(100)[{A-Z}, {a-z},{BS}]<-- " "
+42.   Escribir "Ingrese el tipo de motor" 
+43.   Leer motor  // gasolina
+44.   Escribir "Ingrese el numero de asientos"
+45.   Leer asientos // 3
+46.   cadena <-- b + " con motor a " + motor + " y " + asientos + " asientos.\n" // Moto con motor a gasolina y 3 asientos.
+47.   return cadena
+48. fin funcion calcularMoto
 
-47.Fin
+49.Fin
