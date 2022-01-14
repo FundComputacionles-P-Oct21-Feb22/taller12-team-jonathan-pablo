@@ -1,2 +1,17 @@
-//Taller 12 Prueba en clase
-// Integrantes: Jonathan y Pablo 
+//Ejercicio 01
+
+1.  Inicio 
+2.  funcion principal()
+3.      (arreglo1(4), i[0-n]) <-- {1, 2, 5, 6}
+4.      (arreglo2(4), i[0-n]) <-- {9, 8, 7, 1}
+5.      (arreglo3(4), i[0-n]) <-- {10, 18, 17, 10}
+6.      Para(i<-- 0, i < 4, 1 ) haga
+7.           generarInformacion(arreglo(i),arreglo2(i),arreglo3(i))
+8.      Fin_Para 
+9.  fin funcion principal
+10. funcion generarInformacion(a, i; b, i; c, i)
+11.     m, d[0-n]
+12.     m = (a**2 + b ** 2) + a*c
+13.     Escribir "el valor de m es " + m + " y los valores usados par la operación son: " + a + ","+ b + ","+ c
+14. fin funcion generarInformacion
+15.Fin   
